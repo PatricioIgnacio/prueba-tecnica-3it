@@ -10,6 +10,9 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { ResultsComponent } from './results/results.component';
 import { LayoutComponent } from './layout/layout.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,7 @@ import { LayoutComponent } from './layout/layout.component';
     ResultsComponent,
     LayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,7 +1,26 @@
 <app-navbar></app-navbar>
 
-<div class="container mt-4">
-  <p>dashboard works!</p>
+<div class="style-body">
+  <h2 class="typewriter">Encuesta</h2>
+  <br />
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="tipoMusica">¿Qué tipo de música prefieres?</label>
+      <select id="tipoMusica" name="tipoMusica">
+        <option *ngFor="let details of details">
+          {{ details.musica }}
+        </option>
+      </select>
+    </div>
+    <br />
+    <div>
+      <label for="email">Ingresar e-mail:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <button type="submit">Guardar</button>
+  </form>
+  <br />
+  <p>{{ message }}</p>
 </div>
 
 <app-footer></app-footer>
