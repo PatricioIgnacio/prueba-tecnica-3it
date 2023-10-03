@@ -12,6 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,13 @@ import { FormsModule } from '@angular/forms';
     ResultsComponent,
     LayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgApexchartsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
